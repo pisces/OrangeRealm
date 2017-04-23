@@ -194,4 +194,4 @@ Steve Kim, hh963103@gmail.com
 
 ## License
 
-UIViewControllerTransitions is available under the MIT license. See the LICENSE file for more info.
+OrangeRealm is available under the MIT license. See the LICENSE file for more info.
