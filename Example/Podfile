@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'OrangeRealm_Example' do
+  pod 'OrangeRealm', :path => '../'
+
+  target 'OrangeRealm_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
