@@ -1,0 +1,27 @@
+{
+  "name": "OrangeRealm",
+  "version": "0.1.0",
+  "summary": "OrangeRealm helps you freeing multithreading and UI integration when using Realm",
+  "description": "OrangeRealm helps you freeing multithreading and UI integration when using Realm",
+  "homepage": "https://github.com/pisces/OrangeRealm",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Steve Kim": "hh963103@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/pisces/OrangeRealm.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "OrangeRealm/Classes/**/*",
+  "dependencies": {
+    "RealmSwift": [
+      "~> 2.6.1"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+framework module OrangeRealm {
+  umbrella header "OrangeRealm-umbrella.h"
+
+  export *
+  module * { export * }
+}

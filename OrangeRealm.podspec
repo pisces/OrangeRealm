@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'OrangeRealm'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of OrangeRealm.'
+  s.summary          = 'OrangeRealm helps you freeing multithreading and UI integration when using Realm'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,26 +17,14 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/hh963103@gmail.com/OrangeRealm'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.description      = "OrangeRealm helps you freeing multithreading and UI integration when using Realm"
+  s.homepage         = "https://github.com/pisces/OrangeRealm"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'hh963103@gmail.com' => 'pisces@retrica.co' }
-  s.source           = { :git => 'https://github.com/hh963103@gmail.com/OrangeRealm.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Steve Kim' => 'hh963103@gmail.com' }
+  s.source           = { :git => 'https://github.com/pisces/OrangeRealm.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
-
   s.source_files = 'OrangeRealm/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'OrangeRealm' => ['OrangeRealm/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'RealmSwift', '~> 2.6.1'
 end
