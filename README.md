@@ -93,10 +93,10 @@ class SampleObject: Object {
 #### This sample is integration with UITableView
 
 ```swift
+// Sync section for UITableView
+// Update UITableView after add notification for realm
 result = SampleRealmManager.shared.query("id > 0", sortProperty: "id", ascending: false)
-	// Sync with section of UITableView
     .set(section: 1)
-    // Update UITableView after add notification for realm
     .changed({ [weak self] (section, deletions, insertions, modifications) in
         guard let weakSelf = self else {return}
         
