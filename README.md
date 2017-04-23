@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/UIViewControllerTransitions.svg?style=flat)](http://cocoapods.org/pods/OrangeRealm)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-- OrangeRealm helps you freeing multithreading and UI integration when using Realm
+- OrangeRealm helps you safety multithreading and UI integration using Realm
 
 ## Features
 - Thread safety

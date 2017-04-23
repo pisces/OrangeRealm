@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'OrangeRealm'
   s.version          = '0.1.0'
-  s.summary          = 'OrangeRealm helps you freeing multithreading and UI integration when using Realm'
+  s.summary          = 'OrangeRealm helps you safety multithreading and UI integration using Realm'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = "OrangeRealm helps you freeing multithreading and UI integration when using Realm"
+  s.description      = "OrangeRealm helps you safety multithreading and UI integration using Realm"
   s.homepage         = "https://github.com/pisces/OrangeRealm"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Steve Kim' => 'hh963103@gmail.com' }
