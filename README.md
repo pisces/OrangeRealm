@@ -12,6 +12,7 @@
 - Thread safety
 - Simple interface
 - Easy UI integration
+- Support query limit, max, offset with filter, unlink
 - Abstraction for life cycle of Realm
 
 ## Import
@@ -107,6 +108,32 @@ result = SampleRealmManager.shared.query("id > 0", sortProperty: "id", ascending
     })
 
 self.tableView.reloadData()
+```
+
+### Support results of 3 types - RealmQueryResult, Generic array, RealmResult
+```swift
+SampleRealmManager.shared.query()
+SampleRealmManager.shared.objects()
+SampleRealmManager.shared.results()
+```
+
+### Doing limit, max query
+```swift
+let result = SampleRealmManager.shared.query("id > 0", sortProperty: "id", ascending: false, limit: 10, max: 10)
+```
+
+### Doing offset query with filter
+```swift
+let offset = 2
+
+let result = SampleRealmManager.shared.query("id > 0", sortProperty: "id", ascending: false) { (object) -> Bool in
+    return object.id! > offset
+}
+```
+
+### Gain unlinked objects from Realm
+```swift
+let result = SampleRealmManager.shared.query("id > 0", sortProperty: "id", ascending: false, unlink: true)
 ```
 
 ## Installation
