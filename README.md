@@ -1,9 +1,9 @@
 # OrangeRealm
 
-[![CI Status](http://img.shields.io/travis/pisces/UIViewControllerTransitions.svg?style=flat)](https://travis-ci.org/pisces/OrangeRealm)
-[![Version](https://img.shields.io/cocoapods/v/UIViewControllerTransitions.svg?style=flat)](http://cocoapods.org/pods/OrangeRealm)
-[![License](https://img.shields.io/cocoapods/l/UIViewControllerTransitions.svg?style=flat)](http://cocoapods.org/pods/OrangeRealm)
-[![Platform](https://img.shields.io/cocoapods/p/UIViewControllerTransitions.svg?style=flat)](http://cocoapods.org/pods/OrangeRealm)
+[![CI Status](http://img.shields.io/travis/pisces/OrangeRealm.svg?style=flat)](https://travis-ci.org/pisces/OrangeRealm)
+[![Version](https://img.shields.io/cocoapods/v/OrangeRealm.svg?style=flat)](http://cocoapods.org/pods/OrangeRealm)
+[![License](https://img.shields.io/cocoapods/l/OrangeRealm.svg?style=flat)](http://cocoapods.org/pods/OrangeRealm)
+[![Platform](https://img.shields.io/cocoapods/p/OrangeRealm.svg?style=flat)](http://cocoapods.org/pods/OrangeRealm)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 - OrangeRealm helps you safety multithreading and UI integration using Realm
