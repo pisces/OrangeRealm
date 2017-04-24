@@ -95,7 +95,7 @@ class SampleObject: Object {
 ```swift
 // Sync section for UITableView
 // Update UITableView after add notification for realm
-result = SampleRealmManager.shared.query("id > 0", sortProperty: "id", ascending: false)
+let result: RealmQueryResult<SampleObject> = SampleRealmManager.shared.query("id > 0", sortProperty: "id", ascending: false)
     .set(section: 1)
     .changed({ [weak self] (section, deletions, insertions, modifications) in
         guard let weakSelf = self else {return}
@@ -112,28 +112,28 @@ self.tableView.reloadData()
 
 ### Support results of 3 types - RealmQueryResult, Generic array, RealmResult
 ```swift
-SampleRealmManager.shared.query()
-SampleRealmManager.shared.objects()
-SampleRealmManager.shared.results()
+let result: RealmQueryResult<SampleObject> = SampleRealmManager.shared.query()
+let result: [SampleObject] = SampleRealmManager.shared.objects()
+let result: Results<SampleObject> = SampleRealmManager.shared.results()
 ```
 
 ### Doing limit, max query
 ```swift
-let result = SampleRealmManager.shared.query("id > 0", sortProperty: "id", ascending: false, limit: 10, max: 10)
+let result: RealmQueryResult<SampleObject> = SampleRealmManager.shared.query("id > 0", sortProperty: "id", ascending: false, limit: 10, max: 10)
 ```
 
 ### Doing offset query with filter
 ```swift
 let offset = 2
 
-let result = SampleRealmManager.shared.query("id > 0", sortProperty: "id", ascending: false) { (object) -> Bool in
+let result: RealmQueryResult<SampleObject> = SampleRealmManager.shared.query("id > 0", sortProperty: "id", ascending: false) { (object) -> Bool in
     return object.id! > offset
 }
 ```
 
 ### Gain unlinked objects from Realm
 ```swift
-let result = SampleRealmManager.shared.query("id > 0", sortProperty: "id", ascending: false, unlink: true)
+let result: RealmQueryResult<SampleObject> = SampleRealmManager.shared.query("id > 0", sortProperty: "id", ascending: false, unlink: true)
 ```
 
 ## Installation
