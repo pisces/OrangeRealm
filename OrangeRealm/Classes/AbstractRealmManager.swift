@@ -23,13 +23,13 @@ open class AbstractRealmManager {
     
     private var isUseSerialQueue: Bool = true
     
-    public lazy var realm: Realm = {
+    public var realm: Realm {
         var realm: Realm!
         self.perform {
             realm = try! Realm(configuration: self.createConfiguration())
         }
         return realm
-    }()
+    }
     
     // MARK: - Con(De)structor
     
