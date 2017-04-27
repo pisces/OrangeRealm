@@ -53,7 +53,7 @@ public class RealmQueryResult<T: Object> {
         let count = objects.count
         if max < 0 {
             objects.append(contentsOf: result.objects)
-        } else if objects.count + result.objects.count < max {
+        } else if objects.count + result.objects.count <= max {
             objects.append(contentsOf: result.objects)
         }
         
@@ -135,7 +135,7 @@ public class RealmQueryResult<T: Object> {
         
         var indexPaths: [IndexPath] = []
         for insertion in insertions {
-            if max > -1, objects.count + 1 >= max {break}
+            if max > -1, objects.count + 1 > max {break}
             
             let object = rs[insertion]
             objects.insert(object, at: insertion)
