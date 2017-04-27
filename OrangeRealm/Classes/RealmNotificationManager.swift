@@ -24,7 +24,10 @@ public class RealmNotificationManager {
     
     public func remove(_ token: NotificationToken?) {
         if let token = token, let index = realmTokens.index(of: token) {
-            token.stop()
+            AbstractRealmManager.shared.perform {
+                token.stop()
+            }
+            
             realmTokens.remove(at: index)
         }
     }
