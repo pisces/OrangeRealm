@@ -25,8 +25,20 @@ open class AbstractRealmManager {
     
     public var realm: Realm {
         var realm: Realm!
-        self.perform {
-            realm = try! Realm(configuration: self.createConfiguration())
+        perform {
+            do {
+                realm = try Realm(configuration: self.createConfiguration())
+            } catch {
+                do {
+                    try FileManager.default.removeItem(at: self.fileURL)
+                } catch {
+                    print("AbstractRealmManager remove realm error \(error.localizedDescription)")
+                }
+                
+                realm = try! Realm(configuration: self.createConfiguration())
+                self.clear()
+                self.recover()
+            }
         }
         return realm
     }
@@ -59,6 +71,10 @@ open class AbstractRealmManager {
     
     open func process(forMigration migration: Migration, oldSchemaVersion: UInt64) {
         fatalError("process(forMigration:oldSchemaVersion:) has not been implemented")
+    }
+    
+    open func recover() {
+        fatalError("recover has not been implemented")
     }
     
     // MARK: - Public methods
