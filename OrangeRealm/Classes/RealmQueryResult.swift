@@ -149,6 +149,8 @@ public class RealmQueryResult<T: Object> {
         
         var indexPaths: [IndexPath] = []
         for modification in modifications {
+            guard modification < objects.count else {continue}
+            
             let object = objects[modification]
             if let index = objects.index(of: object) {
                 indexPaths.append(IndexPath(item: start + index, section: section))
