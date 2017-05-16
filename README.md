@@ -61,6 +61,9 @@ class SampleRealmManager: AbstractRealmManager {
     
     override func process(forMigration migration: Migration, oldSchemaVersion: UInt64) {
     }
+    
+    override func recover() {
+    }
 }
 ```
 
