@@ -1,5 +1,6 @@
 # OrangeRealm
 
+![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg)
 [![CI Status](http://img.shields.io/travis/pisces/OrangeRealm.svg?style=flat)](https://travis-ci.org/pisces/OrangeRealm)
 [![Version](https://img.shields.io/cocoapods/v/OrangeRealm.svg?style=flat)](http://cocoapods.org/pods/OrangeRealm)
 [![License](https://img.shields.io/cocoapods/l/OrangeRealm.svg?style=flat)](http://cocoapods.org/pods/OrangeRealm)
